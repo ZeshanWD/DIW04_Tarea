@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enciclopedia de Front-End</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+  <header>
+    <div class="head">
+      <img class="head__logo" src="assets/logo.png" />
+      <h1 class="head__title">Enciclopedia de Front-End</h1>
+      <p class="head__languages">
+        <span class="head__languages__language--active">ES</span>
+        <span>|</span>
+        <span class="head__languages__language">EN</span>
+      </p>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li class="navbar__list__item"><a class="navbar__list__item__link navbar__list__item__link--active" href="#">Module-Bundlers</a></li>
+        <li class="navbar__list__item"><a class="navbar__list__item__link" href="#">Lenguajes Front-End</a></li>
+        <li class="navbar__list__item"><a class="navbar__list__item__link" href="#">Preprocesadores</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <img class="hero" src="assets/programmer.jpg" />
+
+  <main class="article">
+    <h2 class="article__title">Module Bundlers</h2>
+    <p>Zeshan Choudhary, 23 de Enero de 2021</p>
+    <div class="article__teacher">
+      <img class="article__teacher__image" src="assets/teacher.jpg" />
+      <p class="article__teacher__description">Profesora de ciclos formativos C.I.Politécnico de Estella de la rama de informatica. Profesora Grado Diseño Escuela de Artes de Corella. Diseñadora freelance.</p>
+    </div>
+    <p class="article__definition">Un module bundler nos permite automatizar una serie de tareas así como gestionar los assets de las dependencias que hemos instalado con npm si estamos utilizando ese gestor de paquetes. Parcel es un nuevo module bundler que promete unos tiempos de building ultrarápidos y zero config, por lo que se postula como un claro rival para la herramienta más usada actualmente: Webpack.</p>
+
+    <div class="article__video">
+      <iframe title="Designing a Progressive Web App with Firebase - Designer vs. Developer Google Chrome Developers" width="100%" height="500" src="https://www.youtube.com/embed/JWRl6XiJYNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <span class="article__video__title">Designing a Progressive Web App with Firebase - Designer vs. Developer Google Chrome Developers</span>
+    </div>
+
+    <p class="article__parcelinfo">Parcel es un nuevo empaquetador de código que esta ganando popularidad y que puede ser muy util en debido a su rapidez y características. La ventaja de la que más presumen en su web, y que lo convierten en un serio competidor es su velocidad.Otra de las ventajas más importantes que tiene es que no requiere de configuración, para los que llevamos años usando webpack esto es una agradable novedad, pues la configuración de los empaquetadores suele ser una tarea muy compleja y bastante delicada. El empaquetado de JS, CSS, HTML, archivos, etc es automático, sin que tengamos que añadirle plugins o loaders para definir que hacer con cada tipo de fichero</p>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__logo" src="assets/logo1.png" />
+    <h1 class="footer__title">Enciclopedia de Front-End</h1>
+    <div class="footer__details">
+      <p>Calle Cantones 5. 31243 Estella</p>
+      <p>Tel. 948 22 65 36</p>
+      <p>info@enciclopediafrontend.org</p>
+    </div>
+
+    <div class="footer__social">
+      <img src="assets/twitter.png" />
+      <!-- <object data="assets/twitter.svg" width="25px" height="25px"></object> -->
+      <object data="assets/facebook.svg" width="25px" height="25px"></object>
+      <object data="assets/instagram.svg" width="25px" height="25px"></object>
+      <object data="assets/yt.svg" width="25px" height="25px"></object>
+    </div>
+    <div class="footer__nav">
+      <ul class="footer__nav__list">
+        <li class="footer__nav__list__item"><a class="footer__nav__list__item__link" href="#">Quiénes somos</a></li>
+        <li class="footer__nav__list__item"><a class="footer__nav__list__item__link" href="#">Política de privacidad</a></li>
+        <li class="footer__nav__list__item"><a class="footer__nav__list__item__link" href="#">Aviso legal</a></li>
+        <li class="footer__nav__list__item"><a class="footer__nav__list__item__link" href="#">Cookies</a></li>
+      </ul>
+    </div>
+
+    <p>Actividad realizada por Zeshan Choudhary, para la asignatura Diseño de Interfaces WEB . Curso 2020-2021</p>
+  </footer>
+</body>
+</html>

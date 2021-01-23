@@ -1,0 +1,160 @@
+@import '../../vendors/normalize.min.css';
+
+// variables
+$border-bottom-color: #D95959;
+$font-size: 1em;
+$logo-width: 60px;
+
+html, body {
+  font-family: 'Arial', sans-serif;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 10px 20px;
+
+  &__logo {
+    width: $logo-width;
+  }
+
+  &__title {
+    font-size: 1.2em;
+  }
+
+  &__languages {
+    &__language--active {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+
+    &__item {
+      margin-right: 25px;
+
+      &__link {
+        color: #000;
+        text-decoration: none;
+      }
+
+      &__link--active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+}
+
+.article {
+  width: 90%;
+  margin: 0px auto;
+
+  &__teacher {
+    background-color: #F7F3F4;   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 25px;
+    border-bottom: 2px solid $border-bottom-color;
+
+    &__image {
+      border-radius: 150px;
+      margin-right: 20px;
+    }
+
+    &__description {
+      font-size: .9em;
+    }
+  }
+
+  &__definition {
+    padding-bottom: 15px;
+    border-bottom: 2px solid $border-bottom-color;
+    font-size: $font-size;
+  }
+
+  &__parcelinfo {
+    font-size: 1em;
+  }
+
+  &__video {
+    text-align: center;
+  }
+
+  &__video__title {
+    font-size: .7em;
+    margin: 0px auto;
+  }
+}
+
+.footer {
+  background-color: #0D0D0D;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0px;
+
+  &__logo {
+    width: $logo-width;
+  }
+
+  &__title {
+    font-size: 1.2em;
+  }
+
+  &__details {
+    font-size: .8em;
+    text-align: center;
+
+    p {
+      margin: 5px 0px;
+    }
+  }
+
+  &__social {
+    color: white;
+  }
+
+  &__nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+    align-items: center;
+    list-style-type: none;
+    
+    &__item {
+      margin-right: 25px;
+      
+      &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: .8em;
+      }
+    }
+  }
+
+  & > p {
+    margin: 0px;
+    font-size: .7em;
+  }
+}
