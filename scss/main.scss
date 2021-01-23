@@ -49,8 +49,15 @@ html, body {
       margin-right: 25px;
 
       &__link {
+        padding: 10px;
         color: #000;
         text-decoration: none;
+      }
+
+      &__link:hover {
+        background-color: lighten($border-bottom-color, 10%);
+        border-radius: 5px;
+        color: #fff;
       }
 
       &__link--active {
@@ -111,8 +118,9 @@ html, body {
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 25px 0px;
+  padding: 40px 0px;
 
   &__logo {
     width: $logo-width;
@@ -132,7 +140,35 @@ html, body {
   }
 
   &__social {
-    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__list {
+      margin: 10px 0px;
+      padding: 0px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      &__item {
+        &__link {
+          padding: 10px 0px;
+        }
+        &__link__logo {
+          margin-right: 15px;
+          width: 12px;
+          height: 12px;
+        }
+
+        &__link:hover {
+          
+        }
+      }
+    }
   }
 
   &__nav__list {
@@ -141,14 +177,22 @@ html, body {
     justify-items: space-between;
     align-items: center;
     list-style-type: none;
+    margin: 0px 0px 20px 0px;
     
     &__item {
       margin-right: 25px;
       
       &__link {
+        padding: 10px;
         color: #fff;
         text-decoration: none;
         font-size: .8em;
+      }
+
+      &__link:hover {
+        background-color: lighten($border-bottom-color, 10%);
+        border-radius: 5px;
+        color: #fff;
       }
     }
   }

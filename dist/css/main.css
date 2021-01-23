@@ -38,8 +38,14 @@ html, body {
   margin-right: 25px;
 }
 .navbar__list__item__link {
+  padding: 10px;
   color: #000;
   text-decoration: none;
+}
+.navbar__list__item__link:hover {
+  background-color: #e38383;
+  border-radius: 5px;
+  color: #fff;
 }
 .navbar__list__item__link--active {
   text-decoration: underline;
@@ -89,8 +95,9 @@ html, body {
   color: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 25px 0px;
+  padding: 40px 0px;
 }
 .footer__logo {
   width: 60px;
@@ -106,7 +113,27 @@ html, body {
   margin: 5px 0px;
 }
 .footer__social {
-  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.footer__social__list {
+  margin: 10px 0px;
+  padding: 0px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__social__list__item__link {
+  padding: 10px 0px;
+}
+.footer__social__list__item__link__logo {
+  margin-right: 15px;
+  width: 12px;
+  height: 12px;
 }
 .footer__nav__list {
   display: flex;
@@ -114,14 +141,21 @@ html, body {
   justify-items: space-between;
   align-items: center;
   list-style-type: none;
+  margin: 0px 0px 20px 0px;
 }
 .footer__nav__list__item {
   margin-right: 25px;
 }
 .footer__nav__list__item__link {
+  padding: 10px;
   color: #fff;
   text-decoration: none;
   font-size: 0.8em;
+}
+.footer__nav__list__item__link:hover {
+  background-color: #e38383;
+  border-radius: 5px;
+  color: #fff;
 }
 .footer > p {
   margin: 0px;
