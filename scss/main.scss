@@ -213,19 +213,13 @@ html, body {
 }
 
 // media queries
-// @media (max-width: 1280px) {
-//   .article__video__iframe {
-//     height: 1000px;
-//   }
-// }
-
-@media (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .article__video__iframe {
-    height: 600px;
+    height: 750px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .article__video__iframe {
     height: 400px; 
   }
