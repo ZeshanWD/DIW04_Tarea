@@ -1,16 +1,13 @@
 @import '../../vendors/normalize.min.css';
+@import "variables";
+@import "mixins";
 
-// variables
-$border-bottom-color: #D95959;
-$font-size: 1.2em;
-$logo-width: 60px;
-
-$breakpoints:  (1280, 1024, 768, 480, 320);
 
 html, body {
   font-family: 'Arial', sans-serif;
 }
 
+// Header Styles
 .head {
   display: flex;
   flex-direction: row;
@@ -28,11 +25,12 @@ html, body {
 
   &__languages {
     &__language--active {
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid $black;
     }
   }
 }
 
+// Header Navbar Styles
 .navbar {
   display: flex;
   flex-direction: row;
@@ -40,11 +38,8 @@ html, body {
   align-items: center;
 
   &__list {
+    @include nav-list;
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     font-weight: bold;
 
     &__item {
@@ -52,13 +47,13 @@ html, body {
 
       &__link {
         padding: 10px;
-        color: #000;
+        color: $black;
         text-decoration: none;
       }
 
       &__link:hover {
-        background-color: lighten($border-bottom-color, 10%);
-        color: #fff;
+        background-color: lighten($pink-border-color, 10%);
+        color: $white;
       }
 
       &__link--active {
@@ -72,17 +67,18 @@ html, body {
   width: 100%;
 }
 
+// Main Article Styles
 .article {
   width: 90%;
   margin: 0px auto;
 
   &__personal {
-    background-color: #F7F3F4;   
+    background-color: $personal-bg;   
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 15px 25px;
-    border-bottom: 2px solid $border-bottom-color;
+    border-bottom: 2px solid $pink-border-color;
 
     &__image {
       border-radius: 50%;
@@ -98,8 +94,8 @@ html, body {
 
   &__definition {
     padding-bottom: 15px;
-    border-bottom: 2px solid $border-bottom-color;
-    font-size: $font-size;
+    border-bottom: 2px solid $pink-border-color;
+    font-size: 1.2em;
   }
 
   &__parcelinfo {
@@ -122,9 +118,10 @@ html, body {
 
 }
 
+// Footer Styles
 .footer {
-  background-color: #0D0D0D;
-  color: #fff;
+  background-color: $footer-bg;
+  color: $white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,14 +153,11 @@ html, body {
     align-items: center;
 
     &__list {
+      @include nav-list;
       min-width: 100px;
       margin: 15px 0px;
       padding: 0px;
       list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
 
       &__item {
         &__link {
@@ -175,17 +169,14 @@ html, body {
         }
 
         &__link:hover {
-          background-color: $border-bottom-color;
+          background-color: $pink-border-color;
         }
       }
     }
   }
 
   &__nav__list {
-    display: flex;
-    flex-direction: row;
-    justify-items: space-between;
-    align-items: center;
+    @include nav-list;
     list-style-type: none;
     margin: 0px 0px 20px 0px;
     
@@ -194,14 +185,14 @@ html, body {
       
       &__link {
         padding: 10px;
-        color: #fff;
+        color: $white;
         text-decoration: none;
         font-size: .8em;
       }
 
       &__link:hover {
-        background-color: lighten($border-bottom-color, 10%);
-        color: #fff;
+        background-color: lighten($pink-border-color, 10%);
+        color: $white;
       }
     }
   }
@@ -212,7 +203,7 @@ html, body {
   }
 }
 
-// media queries
+// Media Queries
 @media screen and (min-width: 1280px) {
   .article__video__iframe {
     height: 750px;
@@ -243,12 +234,9 @@ html, body {
   }
 
   .navbar__list {
+    @include vertical-nav-list;
     margin-top: 10px;
     padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     &__item {
       margin: 5px 0px;
@@ -258,10 +246,7 @@ html, body {
   .footer__nav__list {
     margin-top: 10px;
     padding: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include vertical-nav-list;
 
     &__item {
       margin: 5px 0px;
