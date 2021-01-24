@@ -2,8 +2,10 @@
 
 // variables
 $border-bottom-color: #D95959;
-$font-size: 1em;
+$font-size: 1.2em;
 $logo-width: 60px;
+
+$breakpoints:  (1280, 1024, 768, 480, 320);
 
 html, body {
   font-family: 'Arial', sans-serif;
@@ -56,7 +58,6 @@ html, body {
 
       &__link:hover {
         background-color: lighten($border-bottom-color, 10%);
-        border-radius: 5px;
         color: #fff;
       }
 
@@ -75,7 +76,7 @@ html, body {
   width: 90%;
   margin: 0px auto;
 
-  &__teacher {
+  &__personal {
     background-color: #F7F3F4;   
     display: flex;
     flex-direction: row;
@@ -84,8 +85,10 @@ html, body {
     border-bottom: 2px solid $border-bottom-color;
 
     &__image {
-      border-radius: 150px;
-      margin-right: 20px;
+      border-radius: 50%;
+      margin-right: 15px;
+      width: 90px;
+      height: 90px;
     }
 
     &__description {
@@ -105,12 +108,18 @@ html, body {
 
   &__video {
     text-align: center;
+
+    &__title {
+      font-size: .7em;
+      margin: 0px auto;
+    }
+    
+    &__iframe {
+      height: 600px;
+    }
+
   }
 
-  &__video__title {
-    font-size: .7em;
-    margin: 0px auto;
-  }
 }
 
 .footer {
@@ -120,7 +129,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 0px;
+  text-align: center;
+  padding: 40px 10px;
 
   &__logo {
     width: $logo-width;
@@ -146,7 +156,8 @@ html, body {
     align-items: center;
 
     &__list {
-      margin: 10px 0px;
+      min-width: 100px;
+      margin: 15px 0px;
       padding: 0px;
       list-style-type: none;
       display: flex;
@@ -156,16 +167,15 @@ html, body {
 
       &__item {
         &__link {
-          padding: 10px 0px;
+          padding: 10px;
         }
         &__link__logo {
-          margin-right: 15px;
           width: 12px;
           height: 12px;
         }
 
         &__link:hover {
-          
+          background-color: $border-bottom-color;
         }
       }
     }
@@ -191,7 +201,6 @@ html, body {
 
       &__link:hover {
         background-color: lighten($border-bottom-color, 10%);
-        border-radius: 5px;
         color: #fff;
       }
     }
@@ -200,5 +209,68 @@ html, body {
   & > p {
     margin: 0px;
     font-size: .7em;
+  }
+}
+
+// media queries
+// @media (max-width: 1280px) {
+//   .article__video__iframe {
+//     height: 1000px;
+//   }
+// }
+
+@media (min-width: 1024px) {
+  .article__video__iframe {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .article__video__iframe {
+    height: 400px; 
+  }
+
+  .head {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      order: 2;
+    }
+
+    &__logo {
+      order: 3;
+    }
+
+    &__languages {
+      order: 1;
+    }
+  }
+
+  .navbar__list {
+    margin-top: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+      margin: 5px 0px;
+    }
+  }
+
+  .footer__nav__list {
+    margin-top: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__item {
+      margin: 5px 0px;
+    }
   }
 }
