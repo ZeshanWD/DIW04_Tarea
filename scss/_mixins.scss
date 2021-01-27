@@ -1,14 +1,7 @@
 // Mixins
-@mixin nav-list {
+@mixin flexbox_styles($direction, $justifyContent, $alignItems) {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-@mixin vertical-nav-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
 }

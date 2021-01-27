@@ -9,10 +9,7 @@ html, body {
 
 // Header Styles
 .head {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  @include flexbox_styles(row, space-between, flex-start);
   margin: 10px 20px;
 
   &__logo {
@@ -32,13 +29,10 @@ html, body {
 
 // Header Navbar Styles
 .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
+  @include flexbox_styles(row, center, center);
+  
   &__list {
-    @include nav-list;
+    @include flexbox_styles(row, space-between, center);
     list-style-type: none;
     font-weight: bold;
 
@@ -74,9 +68,7 @@ html, body {
 
   &__personal {
     background-color: $personal-bg;   
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flexbox_styles(row, flex-start, center);
     padding: 15px 25px;
     border-bottom: 2px solid $pink-border-color;
 
@@ -122,10 +114,7 @@ html, body {
 .footer {
   background-color: $footer-bg;
   color: $white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexbox_styles(column, center, center);
   text-align: center;
   padding: 40px 10px;
 
@@ -147,13 +136,10 @@ html, body {
   }
 
   &__social {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+    @include flexbox_styles(row, center, center);
+    
     &__list {
-      @include nav-list;
+      @include flexbox_styles(row, space-between, center);
       min-width: 100px;
       margin: 15px 0px;
       padding: 0px;
@@ -176,7 +162,7 @@ html, body {
   }
 
   &__nav__list {
-    @include nav-list;
+    @include flexbox_styles(row, space-between, center);
     list-style-type: none;
     margin: 0px 0px 20px 0px;
     
@@ -216,10 +202,8 @@ html, body {
   }
 
   .head {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    @include flexbox_styles(column, center, center);
+    
     &__title {
       order: 2;
     }
@@ -234,7 +218,7 @@ html, body {
   }
 
   .navbar__list {
-    @include vertical-nav-list;
+    @include flexbox_styles(column, center, center);
     margin-top: 10px;
     padding: 0px;
 
@@ -246,7 +230,7 @@ html, body {
   .footer__nav__list {
     margin-top: 10px;
     padding: 0px;
-    @include vertical-nav-list;
+    @include flexbox_styles(column, center, center);
 
     &__item {
       margin: 5px 0px;
