@@ -10,11 +10,11 @@ html, body {
   align-items: flex-start;
   margin: 10px 20px;
 }
-.head__logo {
-  width: 60px;
-}
 .head__title {
-  font-size: 1.2em;
+  font-size: 1.5rem;
+}
+.head__languages__language {
+  font-size: 0.8rem;
 }
 .head__languages__language--active {
   border-bottom: 1px solid #000;
@@ -54,9 +54,26 @@ html, body {
   width: 100%;
 }
 
+figure {
+  width: 100%;
+  margin: 30px auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .article {
-  width: 90%;
-  margin: 0px auto;
+  width: 80%;
+  margin: 15px auto;
+  text-align: justify;
+}
+.article__title {
+  font-size: 2rem;
+}
+.article__author {
+  font-size: 1.3rem;
 }
 .article__personal {
   background-color: #F7F3F4;
@@ -70,19 +87,20 @@ html, body {
 .article__personal__image {
   border-radius: 50%;
   margin-right: 15px;
-  width: 90px;
-  height: 90px;
+  margin-bottom: 1rem;
+  width: 150px;
+  height: 150px;
 }
 .article__personal__description {
-  font-size: 0.9em;
+  font-size: 1rem;
 }
 .article__definition {
   padding-bottom: 15px;
   border-bottom: 2px solid #D95959;
-  font-size: 1.2em;
+  font-size: 1.3rem;
 }
 .article__parcelinfo {
-  font-size: 1em;
+  font-size: 1.2rem;
 }
 .article__video {
   text-align: center;
@@ -105,14 +123,11 @@ html, body {
   text-align: center;
   padding: 40px 10px;
 }
-.footer__logo {
-  width: 60px;
-}
 .footer__title {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 .footer__details {
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
 }
 .footer__details p {
@@ -170,9 +185,23 @@ html, body {
   font-size: 0.7em;
 }
 
+/*Clase para los lectores de pantalla*/
+.sr {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 @media screen and (min-width: 1280px) {
   .article__video__iframe {
     height: 750px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar__list__item {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 768px) {

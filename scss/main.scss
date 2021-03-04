@@ -12,15 +12,15 @@ html, body {
   @include flexbox_styles(row, space-between, flex-start);
   margin: 10px 20px;
 
-  &__logo {
-    width: $logo-width;
-  }
-
   &__title {
-    font-size: 1.2em;
+    font-size: 1.5rem;
   }
 
   &__languages {
+    &__language {
+      font-size: .8rem;
+    }
+
     &__language--active {
       border-bottom: 1px solid $black;
     }
@@ -62,9 +62,28 @@ html, body {
 }
 
 // Main Article Styles
+figure {
+  width: 100%;
+  margin: 30px auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .article {
-  width: 90%;
-  margin: 0px auto;
+  width: 80%;
+  margin: 15px auto;
+  text-align: justify;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__author {
+    font-size: 1.3rem;
+  }
 
   &__personal {
     background-color: $personal-bg;   
@@ -75,23 +94,24 @@ html, body {
     &__image {
       border-radius: 50%;
       margin-right: 15px;
-      width: 90px;
-      height: 90px;
+      margin-bottom: 1rem;
+      width: 150px;
+      height: 150px;
     }
 
     &__description {
-      font-size: .9em;
+      font-size: 1rem;
     }
   }
 
   &__definition {
     padding-bottom: 15px;
     border-bottom: 2px solid $pink-border-color;
-    font-size: 1.2em;
+    font-size: 1.3rem;
   }
 
   &__parcelinfo {
-    font-size: 1em;
+    font-size: 1.2rem;
   }
 
   &__video {
@@ -118,16 +138,12 @@ html, body {
   text-align: center;
   padding: 40px 10px;
 
-  &__logo {
-    width: $logo-width;
-  }
-
   &__title {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 
   &__details {
-    font-size: .8em;
+    font-size: 1em;
     text-align: center;
 
     p {
@@ -189,10 +205,25 @@ html, body {
   }
 }
 
+/*Clase para los lectores de pantalla*/
+.sr {
+  position:absolute;
+  height:1px;    
+  width:1px;    
+  overflow:hidden;    
+  clip:rect(1px, 1px, 1px, 1px);
+}
+
 // Media Queries
 @media screen and (min-width: 1280px) {
   .article__video__iframe {
     height: 750px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__list__item {
+    font-size: 1.5rem;
   }
 }
 

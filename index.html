@@ -13,7 +13,7 @@
       <img class="head__logo" src="assets/logo.png" />
       <h1 class="head__title">Enciclopedia de Front-End</h1>
       <p class="head__languages">
-        <span class="head__languages__language--active">ES</span>
+        <span class="head__languages__language head__languages__language--active">ES</span>
         <span>|</span>
         <span class="head__languages__language">EN</span>
       </p>
@@ -28,12 +28,14 @@
   </header>
   
   <!-- Hero Image -->
-  <img class="hero" src="assets/programmer.jpg" />
-
+  <figure>
+    <img class="hero" src="assets/programmer.jpg" />
+  </figure>
+  
   <!-- Main Article -->
   <main class="article">
     <h2 class="article__title">Module Bundlers</h2>
-    <p>Zeshan Choudhary, 23 de Enero de 2021</p>
+    <p class="article__author">Zeshan Choudhary, 23 de Enero de 2021</p>
     <div class="article__personal">
       <img class="article__personal__image" src="assets/user.png" />
       <p class="article__personal__description">
@@ -42,10 +44,16 @@
     </div>
     <p class="article__definition">Un module bundler nos permite automatizar una serie de tareas así como gestionar los assets de las dependencias que hemos instalado con npm si estamos utilizando ese gestor de paquetes. Parcel es un nuevo module bundler que promete unos tiempos de building ultrarápidos y zero config, por lo que se postula como un claro rival para la herramienta más usada actualmente: Webpack.</p>
 
+  <figure>
     <div class="article__video">
       <iframe class="article__video__iframe" title="Designing a Progressive Web App with Firebase - Designer vs. Developer Google Chrome Developers" width="100%" src="https://www.youtube.com/embed/JWRl6XiJYNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <span class="article__video__title">Designing a Progressive Web App with Firebase - Designer vs. Developer Google Chrome Developers</span>
     </div>
+    <figcaption>
+      <cite lang="en">Designing a Progressive Web App with Firebase - Designer vs. Developer 
+        <abbr title="Google Chrome Developers">Google Chrome Developers</abbr> 
+      </cite>
+    </figcaption>
+  </figure>
 
     <p class="article__parcelinfo">Parcel es un nuevo empaquetador de código que esta ganando popularidad y que puede ser muy util en debido a su rapidez y características. La ventaja de la que más presumen en su web, y que lo convierten en un serio competidor es su velocidad.Otra de las ventajas más importantes que tiene es que no requiere de configuración, para los que llevamos años usando webpack esto es una agradable novedad, pues la configuración de los empaquetadores suele ser una tarea muy compleja y bastante delicada. El empaquetado de JS, CSS, HTML, archivos, etc es automático, sin que tengamos que añadirle plugins o loaders para definir que hacer con cada tipo de fichero</p>
   </main>
