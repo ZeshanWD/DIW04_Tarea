@@ -1,10 +1,23 @@
 @import '../../vendors/normalize.min.css';
 @import "variables";
 @import "mixins";
+@import "module_bundlers";
+@import "lenguajes_frontend";
 
 
 html, body {
   font-family: 'Arial', sans-serif;
+}
+
+// Common Styles
+figure {
+  width: 100%;
+  margin: 30px auto;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 // Header Styles
@@ -55,79 +68,6 @@ html, body {
       }
     }
   }
-}
-
-.hero {
-  width: 100%;
-}
-
-// Main Article Styles
-figure {
-  width: 100%;
-  margin: 30px auto;
-}
-
-figcaption {
-  font-size: 0.8rem;
-  text-align: center;
-}
-
-.article {
-  width: 80%;
-  margin: 15px auto;
-  text-align: justify;
-
-  &__title {
-    font-size: 2rem;
-  }
-
-  &__author {
-    font-size: 1.3rem;
-  }
-
-  &__personal {
-    background-color: $personal-bg;   
-    @include flexbox_styles(row, flex-start, center);
-    padding: 15px 25px;
-    border-bottom: 2px solid $pink-border-color;
-
-    &__image {
-      border-radius: 50%;
-      margin-right: 15px;
-      margin-bottom: 1rem;
-      width: 150px;
-      height: 150px;
-    }
-
-    &__description {
-      font-size: 1rem;
-    }
-  }
-
-  &__definition {
-    padding-bottom: 15px;
-    border-bottom: 2px solid $pink-border-color;
-    font-size: 1.3rem;
-  }
-
-  &__parcelinfo {
-    font-size: 1.2rem;
-  }
-
-  &__video {
-    text-align: center;
-
-    &__title {
-      font-size: .7em;
-      margin: 0px auto;
-    }
-    
-    &__iframe {
-      height: 600px;
-    }
-
-  }
-
 }
 
 // Footer Styles
@@ -205,22 +145,6 @@ figcaption {
   }
 }
 
-/*Clase para los lectores de pantalla*/
-.sr {
-  position:absolute;
-  height:1px;    
-  width:1px;    
-  overflow:hidden;    
-  clip:rect(1px, 1px, 1px, 1px);
-}
-
-// Media Queries
-@media screen and (min-width: 1280px) {
-  .article__video__iframe {
-    height: 750px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .navbar__list__item {
     font-size: 1.5rem;
@@ -228,10 +152,6 @@ figcaption {
 }
 
 @media screen and (max-width: 768px) {
-  .article__video__iframe {
-    height: 400px; 
-  }
-
   .head {
     @include flexbox_styles(column, center, center);
     

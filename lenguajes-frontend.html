@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enciclopedia de Front-End</title>
+  <title>Lenguajes Front-End</title>
   <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
@@ -22,42 +22,38 @@
     </div>
     <nav class="navbar">
       <ul class="navbar__list">
-        <li class="navbar__list__item"><a class="navbar__list__item__link navbar__list__item__link--active" href="index.html">Module-Bundlers</a></li>
-        <li class="navbar__list__item"><a class="navbar__list__item__link" href="lenguajes-frontend.html">Lenguajes Front-End</a></li>
+        <li class="navbar__list__item"><a class="navbar__list__item__link" href="index.html">Module-Bundlers</a></li>
+        <li class="navbar__list__item"><a class="navbar__list__item__link navbar__list__item__link--active" href="lenguajes-frontend.html">Lenguajes Front-End</a></li>
         <li class="navbar__list__item"><a class="navbar__list__item__link" href="#">Preprocesadores</a></li>
       </ul>
     </nav>
-  </header>
-  
-  <!-- Hero Image -->
-  <figure>
-    <img class="hero" src="assets/programmer.jpg" />
-  </figure>
-  
-  <!-- Main Article -->
-  <main class="article">
-    <h2 class="article__title">Module Bundlers</h2>
-    <p class="article__author">Zeshan Choudhary, 23 de Enero de 2021</p>
-    <div class="article__personal">
-      <img class="article__personal__image" src="assets/user.png" />
-      <p class="article__personal__description">
-        Desarrollador web especializado en crear soluciones a medida. Graduado en Desarrollo de Aplicaciones Multiplataforma y actualmente estudiando el Grado Superior de Desarrollo de Aplicaciones Web. 
+
+  <main class="main__container">
+    <figure>
+      <img class="main__image" src="assets/workspace.jpg" />
+    </figure>
+
+    <div class="container">
+      <h2 class="container__title">Las bases del frontend</h2>
+      <p class="container__description">
+        A pesar de que hay varios lenguajes que se usan en el frontend, nosotros nos fijaremos en tres elmento: HTML, CSS y Javascript. Aunque HTML y CSS no son lenguajes de programación propiamente dichos :). 
       </p>
-    </div>
-    <p class="article__definition">Un module bundler nos permite automatizar una serie de tareas así como gestionar los assets de las dependencias que hemos instalado con npm si estamos utilizando ese gestor de paquetes. Parcel es un nuevo module bundler que promete unos tiempos de building ultrarápidos y zero config, por lo que se postula como un claro rival para la herramienta más usada actualmente: Webpack.</p>
 
-  <figure>
-    <div class="article__video">
-      <iframe class="article__video__iframe" title="Designing a Progressive Web App with Firebase - Designer vs. Developer Google Chrome Developers" width="100%" src="https://www.youtube.com/embed/JWRl6XiJYNA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="container__language__list">
+        <li class="container__language__list__item">
+          <img class="container__language__list__item__img" src="assets/javascript.jpg" alt="Javascript" />
+          <p class="container__language__list__item__description">¿Qués es Javascript?</p>
+        </li>
+        <li class="container__language__list__item">
+          <img class="container__language__list__item__img" src="assets/html.jpg" alt="html" />
+          <p class="container__language__list__item__description">¿Qués es HTML?</p>
+        </li>
+        <li>
+          <img class="container__language__list__item__img" src="assets/css.jpg" alt="css" />
+          <p class="container__language__list__item__description">¿Qués es CSS?</p>
+        </li>
+      </div>
     </div>
-    <figcaption>
-      <cite lang="en">Designing a Progressive Web App with Firebase - Designer vs. Developer 
-        <abbr title="Google Chrome Developers">Google Chrome Developers</abbr> 
-      </cite>
-    </figcaption>
-  </figure>
-
-    <p class="article__parcelinfo">Parcel es un nuevo empaquetador de código que esta ganando popularidad y que puede ser muy util en debido a su rapidez y características. La ventaja de la que más presumen en su web, y que lo convierten en un serio competidor es su velocidad.Otra de las ventajas más importantes que tiene es que no requiere de configuración, para los que llevamos años usando webpack esto es una agradable novedad, pues la configuración de los empaquetadores suele ser una tarea muy compleja y bastante delicada. El empaquetado de JS, CSS, HTML, archivos, etc es automático, sin que tengamos que añadirle plugins o loaders para definir que hacer con cada tipo de fichero</p>
   </main>
 
   <!-- Footer Section -->
@@ -106,5 +102,4 @@
 
     <p>Actividad realizada por Zeshan Choudhary, para la asignatura Diseño de Interfaces WEB . Curso 2020-2021</p>
   </footer>
-</body>
-</html>
+  </header>
