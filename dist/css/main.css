@@ -128,23 +128,29 @@
   height: 150px;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   .main__container {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main__container {
-    width: 720px;
+    width: 850px;
   }
 }
 @media screen and (max-width: 768px) {
+  .main__container {
+    width: 100%;
+  }
+
   .container__language__list {
+    margin: 0;
     flex-direction: column;
   }
   .container__language__list__item__img {
     width: 100%;
-    height: 250px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .container__language__list__item__img {
+    width: 100%;
+    height: 100%;
   }
 }
 html, body {
