@@ -1,5 +1,4 @@
 // Lenguajes FrontEnd Page Styles
-
 .main__image {
   width: 100%;
 } 
@@ -10,10 +9,9 @@
 }
 
 .container {
-  margin: 0px 25px;
+  margin: 0px 15px;
 
   &__language__list {
-    margin-left: 25px;
     text-decoration: none;
     display: flex;
     flex-direction: row;
@@ -36,7 +34,7 @@
 
 @media screen and (min-width: 1280px) {
   .main__container {
-    width: 850px;
+    width: 1020px;
   }
 }
 
@@ -46,7 +44,6 @@
   }
 
   .container__language__list {
-    margin: 0;
     flex-direction: column;
 
     &__item__img {
