@@ -74,9 +74,9 @@
 
 // Media Queries
 @media screen and (min-width: 1280px) {
-  // .article {
-  //   max-width: 720px;
-  // }
+  .article {
+    max-width: 720px;
+  }
   
   .article__video__iframe {
     height: 750px;
@@ -84,9 +84,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  // .article {
-  //   max-width: 720px;
-  // }
+  .article {
+    width: 90%;
+  }
 
   .article__video__iframe {
     height: 400px; 
